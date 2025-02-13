@@ -1,0 +1,103 @@
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(90deg, #4B0082, #003366); /* Violet to Dark Blue gradient */
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.6s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Navbar list */
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar items */
+.navbar-item {
+  margin: 0 20px;
+  position: relative;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Link styling */
+.navbar-item a, 
+.navbar-item {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding: 10px 15px;
+}
+
+/* Glowing hover effect */
+.navbar-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #FFD700; /* Gold underline effect */
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom right;
+}
+
+/* Hover effects */
+.navbar-item:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-item:hover {
+  color: #FFD700; /* Gold color on hover */
+  text-shadow: 0 0 5px #FFD700, 0 0 15px #FFD700;
+}
+
+/* Button click effect */
+.navbar-item:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .navbar-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-item {
+      margin: 10px 0;
+  }
+}

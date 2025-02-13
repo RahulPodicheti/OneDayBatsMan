@@ -1,0 +1,106 @@
+/* Main container */
+.cse-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #4B0082, #003366); /* Violet to Dark Blue */
+    min-height: 100vh;
+    color: white;
+    animation: fadeInPage 1s ease-in-out;
+}
+
+/* Page fade-in effect */
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Container for semester buttons */
+.semester-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Semester buttons */
+.sembuttons {
+    background: linear-gradient(90deg, #6A0DAD, #4B0082);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    animation: fadeInButton 1s ease-in-out;
+}
+
+/* Button animation */
+@keyframes fadeInButton {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Hover effect */
+.sembuttons:hover {
+    background: #FFD700;
+    color: #4B0082;
+    box-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700;
+    transform: scale(1.05);
+}
+
+/* Button click effect */
+.sembuttons:active {
+    transform: scale(0.95);
+}
+
+/* Glowing effect */
+.sembuttons::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.5) 0%, rgba(75, 0, 130, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover glow */
+.sembuttons:hover::after {
+    opacity: 1;
+}
+
+/* Margin top for each button */
+.mt-4 {
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .semester-buttons {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+        max-width: 250px;
+    }
+}

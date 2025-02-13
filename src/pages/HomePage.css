@@ -1,0 +1,66 @@
+/* HomePage styling */
+.home-container {
+    background: linear-gradient(to right, #4B0082, #003366); /* Violet to Dark Blue gradient */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .welcome-message {
+    margin-bottom: 30px;
+  }
+  
+  .welcome-message h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message .description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message .details {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+  
+  .cta {
+    margin-top: 30px;
+  }
+  
+  .cta-button {
+    padding: 15px 40px;
+    background-color: #FFD700;
+    color: #003366; /* Dark Blue */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #4B0082; /* Violet color on hover */
+    color: white;
+  }
+  

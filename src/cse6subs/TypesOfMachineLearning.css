@@ -1,0 +1,50 @@
+/* Main container for the subtopics */
+.subtopics-container {
+    background-color: #f0f0f0; /* Light gray background for the page */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;  /* Full screen height */
+    gap: 20px;  /* Space between buttons */
+    text-align: center;
+  }
+  
+  /* Subtopic button styles */
+  .subtopic-button {
+    background-color: #4B0082;  /* Dark violet background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 300px;  /* Fixed width */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  }
+  
+  /* Button hover effect */
+  .subtopic-button:hover {
+    background-color: #8a2be2;  /* Lighter violet */
+    transform: scale(1.05);  /* Slight scale effect */
+  }
+  
+  /* Button active effect */
+  .subtopic-button:active {
+    background-color: #4b0082;  /* Darker violet */
+    transform: scale(1);  /* Reset scale */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .subtopic-button {
+      width: 90%;  /* Make buttons take more space on small screens */
+      padding: 12px 25px;  /* Adjust padding for smaller screens */
+      font-size: 14px;  /* Slightly smaller font size */
+    }
+  }
+  
