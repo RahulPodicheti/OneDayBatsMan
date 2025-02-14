@@ -104,3 +104,11 @@
         max-width: 250px;
     }
 }
+.cse-container {
+    text-align: center;
+    padding: 80px 50px 50px; /* Increased top padding */
+    background: linear-gradient(135deg, #4B0082, #003366); /* Violet to Dark Blue */
+    min-height: 100vh;
+    color: white;
+    animation: fadeInPage 1s ease-in-out;
+}

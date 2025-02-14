@@ -13,7 +13,7 @@ function Ml() {
         </Link>
         <Link to="/multilayerperception">
           <button className="Topicbutton" data-tooltip="Multi-layer Perception">
-          Unit-2 : Multi-layer Perception
+          Unit-2 : Multi-layer Perceptron
           </button>
         </Link>
         <Link to="/learningwithtrees">

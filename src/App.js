@@ -2,12 +2,12 @@ import React from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Eee from './pages/Eee'
 import Navbar from './components/Navbar'
-import Ai from './cse6subs/Ai'
-import Flat from './cse6subs/Flat'
-import Fsd from './cse6subs/Fsd'
-import Iot from './cse6subs/Iot'
-import Ml from './cse6subs/Ml'
-import PrintCse6Subs from './cse6subs/PrintCse6Subs'
+import Ai from './cseSems/cse6subs/ai/Ai'
+import Flat from './cseSems/cse6subs/flat/Flat'
+import Fsd from './cseSems/cse6subs/fsd/Fsd'
+import Iot from './cseSems/cse6subs/iot/Iot'
+import Ml from './cseSems/cse6subs/ml/Ml'
+import PrintCse6Subs from './cseSems/cse6subs/PrintCse6Subs'
 import Chemical from './pages/Chemical'
 import Civil from './pages/Civil'
 import Csd from './pages/Csd'
@@ -16,7 +16,11 @@ import Csm from './pages/Csm'
 import Ece from './pages/Ece'
 import HomePage from './pages/HomePage'
 import Mechanical from './pages/Mechanical'
-import TypesOfMachineLearning from './cse6subs/TypesOfMachineLearning'
+import TypesOfMachineLearning from './cseSems/cse6subs/ml/mlUnits/TypesOfMachineLearning'
+import ReinforcementLearning from './cseSems/cse6subs/ml/mlUnits/ReinforcementLearning'
+import MultiLayerPerception from './cseSems/cse6subs/ml/mlUnits/MultiLayerPerception'
+import DimensionalityReduction from './cseSems/cse6subs/ml/mlUnits/DimensionalityReduction'
+import LearningWithTrees from './cseSems/cse6subs/ml/mlUnits/LearningWithTrees'
 function App() {
   return (
     <div>
@@ -24,22 +28,26 @@ function App() {
         <Navbar />
         <div>
           <Routes>
-              <Route path='/' element={<HomePage/>} />
-              <Route path='/cse' element={<Cse/>} />
-              <Route path='/csd' element={<Csd/>} />
-              <Route path='/csm' element={<Csm/>} />
-              <Route path='/civil' element={<Civil/>} />
-              <Route path='/chemical' element={<Chemical/>} />
-              <Route path='/mechanical' element={<Mechanical/>} />
-              <Route path='/ece' element={<Ece/>} />
-              <Route path='/eee' element={<Eee/>} />  
-              <Route path='/printcse6su' element={<PrintCse6Subs/>} /> 
-              <Route path='/ai' element={<Ai/>} />            
-              <Route path='/ml' element={<Ml/>} />            
-              <Route path='/flat' element={<Flat/>} />            
-              <Route path='/fsd' element={<Fsd/>} />            
-              <Route path='/iot' element={<Iot/>} />        
-              <Route path='/typesofmachinelearning' element={<TypesOfMachineLearning/>} />
+              <Route exact path='/' element={<HomePage/>} />
+              <Route exact path='/cse' element={<Cse/>} />
+              <Route exact path='/csd' element={<Csd/>} />
+              <Route exact path='/csm' element={<Csm/>} />
+              <Route exact path='/civil' element={<Civil/>} />
+              <Route exact path='/chemical' element={<Chemical/>} />
+              <Route exact path='/mechanical' element={<Mechanical/>} />
+              <Route exact path='/ece' element={<Ece/>} />
+              <Route exact path='/eee' element={<Eee/>} />  
+              <Route exact path='/printcse6su' element={<PrintCse6Subs/>} /> 
+              <Route exact path='/ai' element={<Ai/>} />            
+              <Route exact path='/ml' element={<Ml/>} />            
+              <Route exact path='/flat' element={<Flat/>} />            
+              <Route exact path='/fsd' element={<Fsd/>} />            
+              <Route exact path='/iot' element={<Iot/>} />        
+              <Route exact path='/typesofmachinelearning' element={<TypesOfMachineLearning/>} />
+              <Route exact path='/reinforcementlearning' element={<ReinforcementLearning/>} />
+              <Route exact path='/multilayerperception' element={<MultiLayerPerception/>} />
+              <Route exact path='/dimensionallyreduction' element={<DimensionalityReduction/>} />
+              <Route exact path='/learningwithtrees' element={<LearningWithTrees/>} />
               
           </Routes>
         </div>
