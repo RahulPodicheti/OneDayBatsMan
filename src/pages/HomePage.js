@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css';
-
+import {Link} from 'react-router-dom'
 function HomePage() {
   return (
     <div className="home-container">
@@ -17,7 +17,7 @@ function HomePage() {
         </p>
       </div>
       <div className="cta">
-        <a href="#syllabus" className="cta-button">Explore Syllabus</a>
+        <Link to="/cse" className="cta-button">Explore Syllabus</Link>
       </div>
     </div>
   );
